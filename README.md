@@ -68,7 +68,7 @@ In terms of wave equation, FMCW transmit and received signals are defined using 
 
 $$ Tx = cos(2\pi(f_ct+ \frac{\alpha t^2}{2} )) $$  
 
-The received signal is nothing but the time delayed version of the Transmit Signal. In digital signal processing the time delayed version is defined by $(t - \tau )$, where $\tau$ represents the delay time, which in radar processing is the trip time for the signal.
+The received signal is nothing but the time delayed version of the Transmit Signal. In digital signal processing the time delayed version is defined by $(t - \tau )$, where $\tau$ represents the delay time, which in radar processing is the trip time for the signal.  
 $$ Rx = cos(2\pi(f_c(t-\tau)+ \frac{\alpha (t-\tau)^2}{2} )) $$  
 
 On mixing these two signals, we get the beat signa. The beat signal can be calculated by multiplying the Transmit signal with Receive signal. This process in turn works as frequency subtraction. It is implemented by element by element multiplication of transmit and receive signal matrices.
