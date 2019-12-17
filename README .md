@@ -14,7 +14,7 @@ This Project taking about how Radar detection object' position and velocity;We w
 
 #### 1.  Radar System Requirements
 
-<img src="image02.png" width="700" height="400" />
+<img src="results/image02.png" width="700" height="400" />
 
 System Requirements defines the design of a Radar. The sensor fusion design for different driving scenarios requires different system configurations from a Radar. In this project, we designing a Radar based on the given system requirements (above).  
 
@@ -59,7 +59,7 @@ Now we have the parameters of the radar; Next we will design the FMCW waveform b
 
 
 #### 4.  Modeling singal propagation for the moving Target scenario 
-<img src="image03.png" width="700" height="400" />
+<img src="results/image03.png" width="700" height="400" />
 
 Next, we will be simulating the signal propagation and moving target scenario.  
 In terms of wave equation, FMCW transmit and received signals are defined using these wave equations, where **a = Slope of the signal**. The Transmit Signal is given by:  
@@ -118,7 +118,7 @@ First, Implement the 1D FFT on the Mixed Signal:
 
 - Result : 
 
-<img src="fft01.png" width="500" height="200" />
+<img src="results/fft01.png" width="500" height="200" />
 
 #### 6. RANGE DOPPLER RESPONSE
 
@@ -141,7 +141,7 @@ Next， we will run a 2DFFT on the mixed signal(beat signal) output and generate
 `range_axis = linspace(-200,200,Nr/2)*((Nr/2)/400);`  
 `figure,surf(doppler_axis,range_axis,RDM);`  
 
-<img src="fft02.png" width="500" height="200" />
+<img src="results/fft02.png" width="500" height="200" />
 
 #### 7. Perform the CFAR processing on the output of 2nd FFT to display the target  
 
@@ -151,7 +151,7 @@ It is important to filter out clutter for successful detection of targets. This 
 
 Next, we will useing a dynamic thresholding technique called CFAR (Constant False Alarm Rate). With this technique, the noise at every or group of range/doppler bins is monitored and the signal is compared to the local noise level. This comparison is used create a threshold which holds the false alarm rate constant.
 
-<img src="fft03.png" width="600" height="250" />
+<img src="results/fft03.png" width="600" height="250" />
 
 CFAR implementation
 - Select the number of Training Cells in both the dimensions.  
@@ -211,9 +211,6 @@ end```
 `title('The output of the 2D CFAR process');`  
 `colorbar;`
 
-<img src="fft04.png" width="500" height="200" />
+<img src="results/fft04.png" width="500" height="200" />
 
 
-```python
-
-```
